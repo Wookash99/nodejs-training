@@ -3,7 +3,7 @@ var url = process.env.MONGODB_URI || 'mongodb://localhost:27017/booksdb';
 
 var connectionPromise = MongoClient.connect(url, {bufferMaxEntries: 0});
 var collectionPromise = connectionPromise.then(function (db) {
-    return db.collection('books');
+    return db.collection('wookash-books');
 });
 
 module.exports = {
